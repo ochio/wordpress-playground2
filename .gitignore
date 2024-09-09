@@ -14,6 +14,6 @@ Thumbs.db
 /project/wp-content/*
 !/project/wp-content/themes
 /project/wp-content/themes/*
-!/project/wp-content/themes/my-theme
+!/project/wp-content/themes/sample
 /project/wp-content/themes/my-theme/css/.sass-cache/*
 /project/wp-includes/*
