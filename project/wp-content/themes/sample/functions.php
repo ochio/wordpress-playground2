@@ -16,4 +16,8 @@ add_filter('the_title', function($title) {
 
 add_filter('show_admin_bar', '__return_false');
 
+add_action('wp_body_open', function() {
+  echo '<!--wp_body_open action hook-->';
+});
+
 ?>
