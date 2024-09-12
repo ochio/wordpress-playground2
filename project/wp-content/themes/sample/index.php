@@ -20,7 +20,7 @@
                         </a>
                         <?php 
                         if ( has_post_thumbnail() ) {
-                            the_post_thumbnail();
+                            the_post_thumbnail("thumbnail");
                         }else{ ?>
                                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/noimage.jpg">
                         <?php } ?>

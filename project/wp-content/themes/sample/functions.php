@@ -6,10 +6,6 @@ function enqueue_custom_styles() {
 add_action('wp_enqueue_scripts', 'enqueue_custom_styles');
 
 
-add_action('init', function() {
-  echo '<!-- This is a comment. -->';
-});
-
 add_filter('the_title', function($title) {
   return '★' . $title;
 });
