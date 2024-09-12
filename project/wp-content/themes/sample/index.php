@@ -18,6 +18,12 @@
                             </h2>
                             <h3 class="post-subtitle"><?php the_excerpt(); ?></h3>
                         </a>
+                        <?php 
+                        if ( has_post_thumbnail() ) {
+                            the_post_thumbnail();
+                        }else{ ?>
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/images/noimage.jpg">
+                        <?php } ?>
                         <p class="post-meta">
                             Posted by
                             <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>"><?php the_author(); ?></a>
