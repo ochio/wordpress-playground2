@@ -11,6 +11,12 @@
                         <div class="col-md-10 col-lg-8 col-xl-7">
                             <?php the_post_thumbnail(array(800, 300), array('alt'=>'アイキャッチ画像'));?>
                             <?php the_content(); ?>
+                            <?php 
+                                if (comments_open() || get_comments_number()) {
+                                    echo get_comments_number();
+                                    comments_template();
+                                }
+                            ?>
                             <?php
                                 if (has_post_thumbnail()) {
                                 $id  = get_post_thumbnail_id();
