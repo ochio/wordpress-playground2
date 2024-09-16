@@ -31,5 +31,13 @@ function getEyecatchUrl() {
   return $img[0];
 }
 
+
+add_action('init', function() {
+  register_nav_menus([
+    'globalNav' => 'グローバルナビゲーション',
+    'footerNav' => 'フッターナビゲーション',
+  ]);
+});
+
 ?>
 

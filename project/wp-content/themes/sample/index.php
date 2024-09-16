@@ -1,5 +1,15 @@
 <html <?php language_attributes() ?>>
     <body <?php body_class() ?>>
+    <?php
+        $menuName  = "globalNav";
+        $locations = get_nav_menu_locations();
+        $menu      = wp_get_nav_menu_object($locations[$menuName]);
+        $menuItems = wp_get_nav_menu_items($menu->term_id);
+        ?>
+        <?php foreach($menuItems as $menuItem): ?>
+        　　<li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="<?php echo esc_attr($menuItem->url); ?>"><?php echo esc_html($menuItem->title); ?></a></li>
+        <?php endforeach; ?>
+
         <?php if(have_posts()): ?>
             <?php while (have_posts()): ?>
                 <?php the_post(); ?>
