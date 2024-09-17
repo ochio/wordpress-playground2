@@ -4,6 +4,13 @@
        <!-- Page Header-->
       <?php get_template_part("includes/header", "archive"); ?>
         <?php if(have_posts()): ?>
+            <?php
+                if (isset($_GET['s']) && empty($_GET['s'])) {
+                echo '検索キーワードが確認できません。';
+                } else {
+                echo '「' . $_GET['s'] . '」の検索結果: ' . $wp_query->found_posts . '件';
+                }
+            ?>
             <?php while (have_posts()): ?>
                 <?php the_post(); ?>
                     <!-- Post preview-->
@@ -39,8 +46,8 @@
                     <!-- Divider-->
                     <hr class="my-4" />
                     <?php endwhile; ?>
-                <?php else: ?>
-                    <p>Article not found.</p>
-                <?php endif; ?>
+                    <?php else: ?>
+                        <p>キーワードに一致しませんでした。</p>
+                    <?php endif; ?>
     </body>
 </html>
