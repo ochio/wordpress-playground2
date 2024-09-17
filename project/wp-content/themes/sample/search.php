@@ -1,7 +1,8 @@
 <html <?php language_attributes() ?>>
+  archive
     <body <?php body_class() ?>>
-        <!-- Navigation-->
-        <?php get_template_part("includes/nav"); ?>
+       <!-- Page Header-->
+      <?php get_template_part("includes/header", "archive"); ?>
         <?php if(have_posts()): ?>
             <?php while (have_posts()): ?>
                 <?php the_post(); ?>
@@ -41,23 +42,5 @@
                 <?php else: ?>
                     <p>Article not found.</p>
                 <?php endif; ?>
-                <!-- Pager-->
-                <?php
-                $linkElm = get_previous_posts_link('← 新しい投稿へ');
-                if ($linkElm) {
-                    $linkElm = str_replace('<a', '<a class="btn btn-primary float-left"', $linkElm);
-                    echo '<div class="d-flex justify-content-between mb-4">';
-                    echo $linkElm;
-                } else {
-                    echo '<div class="d-flex justify-content-end mb-4">';
-                }
-
-                $linkElm = get_next_posts_link('古い投稿へ →');
-                if ($linkElm) {
-                    $linkElm = str_replace('<a', '<a class="btn btn-primary float-right"', $linkElm);
-                    echo $linkElm;
-                }
-                echo "</div>";
-                ?>
     </body>
 </html>
