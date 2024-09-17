@@ -39,5 +39,23 @@ add_action('init', function() {
   ]);
 });
 
+// add_action( 'init', function() {
+//   register_post_type('music', [
+//     'label' => '音楽',
+//     'supports' => ['title', 'editor', 'thumbnail'],
+//     'public' => true,
+//     'has_archive' => true,
+//   ]);
+// });
+
+function post_has_archive( $args, $post_type ) {
+  if ( 'post' == $post_type ) {
+    $args['rewrite'] = true;
+    $args['has_archive'] = 'archivepage'; //URLとして使いたい文字列
+  }
+  return $args;
+}
+add_filter( 'register_post_type_args', 'post_has_archive', 10, 2 );
+
 ?>
 

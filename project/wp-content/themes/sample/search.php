@@ -1,5 +1,5 @@
 <html <?php language_attributes() ?>>
-  archive
+    search
     <body <?php body_class() ?>>
        <!-- Page Header-->
       <?php get_template_part("includes/header", "archive"); ?>
