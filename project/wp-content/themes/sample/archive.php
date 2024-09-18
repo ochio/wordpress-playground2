@@ -1,5 +1,9 @@
 <html <?php language_attributes() ?>>
+<<<<<<< HEAD
   archive b
+=======
+  archive aa
+>>>>>>> 1e1913fa5875428734a5fb42f767780ab2519e64
     <body <?php body_class() ?>>
        <!-- Page Header-->
       <?php get_template_part("includes/header", "archive"); ?>aa

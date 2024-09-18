@@ -3,6 +3,7 @@
         <div class="row gx-4 gx-lg-5 justify-content-center">
             <div class="col-md-10 col-lg-8 col-xl-7">
                 <div class="site-heading">
+<<<<<<< HEAD
                 <?php if(false): ?>
                     <div>false</div>
                 <?php elseif(is_tax()): ?>
@@ -11,6 +12,8 @@
                         $taxonomy     = get_taxonomy($query_object->taxonomy);
                     ?>
                     <h1><?php echo $taxonomy->label; ?></h1>
+=======
+>>>>>>> 1e1913fa5875428734a5fb42f767780ab2519e64
                 <?php elseif(is_post_type_archive()): ?>
                 <?php $custumFlg = 1; ?>
                 <h1>カスタム投稿</h1>
