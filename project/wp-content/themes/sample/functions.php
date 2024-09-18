@@ -45,6 +45,7 @@ add_action( 'init', function() {
     'supports' => ['title', 'editor', 'thumbnail'],
     'public' => true,
     'has_archive' => true,
+    'supports' => ['title', 'editor', 'thumbnail', 'page-attributes', 'custom-fields'],
   ]);
 });
 
