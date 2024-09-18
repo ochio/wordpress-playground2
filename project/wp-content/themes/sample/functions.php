@@ -57,5 +57,12 @@ function post_has_archive( $args, $post_type ) {
 }
 add_filter( 'register_post_type_args', 'post_has_archive', 10, 2 );
 
+
+register_taxonomy('genre', 'music', [
+  'label' => '音楽ジャンル',
+  'hierarchical' => true,
+  'show_in_rest' => true,
+]);
+
 ?>
 
