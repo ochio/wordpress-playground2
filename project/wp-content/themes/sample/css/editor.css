@@ -1,0 +1,8 @@
+p {
+  color: blue;
+  padding: 50px;
+}
+
+.is-style-p {
+  color: red;
+}
