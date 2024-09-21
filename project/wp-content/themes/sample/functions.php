@@ -65,14 +65,5 @@ register_taxonomy('genre', 'music', [
   'show_in_rest' => true,
 ]);
 
-add_shortcode('date', function($atts) {
-  $atts = shortcode_atts([
-    'before' => 'Today is ',
-    'after' => ' !',
-  ], $atts, 'date');
-
-  return $atts['before'] . date('Y年 n月 j日') . $atts['after'];
-});
-
 ?>
 
