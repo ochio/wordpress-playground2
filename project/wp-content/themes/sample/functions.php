@@ -66,4 +66,3 @@ register_taxonomy('genre', 'music', [
 ]);
 
 ?>
-
